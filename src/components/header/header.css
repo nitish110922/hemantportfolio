@@ -1,0 +1,159 @@
+header{
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.my-name{
+    font-size: 4.5rem;
+    color: var(--color-primary);
+}
+
+/*=================CTA================= */
+
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/*=================HEADER SOCIALS================= */
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    animation: rotateScrollDown 0.5s ease;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+}
+
+.header__socials a{
+    font-size: 1.2rem;
+}
+
+.header__socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+.scroll__down{
+    position: absolute;
+    right: -1.5rem;
+    bottom: 7rem;
+    transform: rotate(90deg);
+    animation: rotateScrollDown 0.5s ease;
+    animation-iteration-count: 2;
+    animation-direction:normal;
+}
+
+@keyframes rotateScrollDown {
+    0%{
+        transform: rotate(3deg);
+        transition: all ease;
+    }
+    20%{
+        transform: rotate(60deg);
+        transition: all ease;
+    }
+    40%{
+        transform: rotate(90deg);
+        transition: all ease;
+    }
+    60%{
+        transform: rotate(120deg);
+        transition: all ease;
+    }
+    80%{
+        transform: rotate(150deg);
+        transition: all ease;
+    }
+    100%{
+        transform: rotate(180deg);
+        transition: all ease;
+    }
+}
+
+@keyframes moveup {
+    0%{
+        bottom: 4rem;
+    }
+    20%{
+        bottom: 5rem;
+    }
+    40%{
+       bottom: 6rem;
+    }
+    60%{
+        bottom: 5rem;
+    }
+    80%{
+        bottom: 4rem;
+    }
+    100%{
+        bottom: 3rem;
+    }
+}
+
+/* ================MEDIA QUERIES (MEDIUM DEVICES)=================== */
+
+@media screen and (max-width: 1024px) {
+    header{
+        height: 75vh;
+    }
+
+    .my-name{
+        font-size: 3rem;
+    }
+
+    h1{
+        font-size: 1vw;
+    }
+
+    header h2{
+        font-size: 1.3rem;
+    }
+
+    .header-inner-container{
+        text-align: center;
+        width: 95%;
+    }
+}
+
+/* ================MEDIA QUERIES (SMALL DEVICES)=================== */
+
+@media screen and (max-width: 640px) {
+    header{
+        height: 100vh;
+        padding-top: 1.5rem;
+    }
+
+    .my-name{
+        font-size: 3rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    header h2{
+        font-size: 1rem;
+    }
+
+    .scroll__down,.header__socials{
+        display: none;
+    }
+}
